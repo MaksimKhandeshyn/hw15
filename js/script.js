@@ -1,9 +1,4 @@
 //--1--
-
-// const balance = [100, 452, 71, 89];
-// const res = balance.reduce((sum, value) => sum + value, 0);
-// console.log(res);
-
 const usersBalance = [
   { name: "Bill", id: 12223, balance: 100 },
   { name: "Steev", id: 20111, balance: 452 },
@@ -12,7 +7,6 @@ const usersBalance = [
 ];
 const res = usersBalance.reduce((value, sum) => value + sum.balance, 0);
 console.log(res);
-//Тут не знаю как надо было делать, через массив объектов или просто через массив
 
 //--2--
 const nameOfFriend = [
@@ -36,9 +30,8 @@ const ammountOfFriends = [
   { name: "John", friend: 3 },
   { name: "Nick", friend: 1 },
 ];
-// Честное слово, не знаю как вытящить массив
-const sorting = (a, b) => a.friend - b.friend;
-console.log(ammountOfFriends.sort(sorting));
+const sorting = (a, b) => b.friend - a.friend;
+console.log(ammountOfFriends.sort(sorting).map((nameUser) => nameUser.name));
 
 // --4--
 const skills = [
